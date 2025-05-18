@@ -118,13 +118,23 @@ button:hover {
     background: #2575fc;
 }
 
+.forecast-item > div:first-child {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.forecast-item img {
+    width: 60px;
+    height: 60px;
+}  
+
 .weather-info-section {
     background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    max-width: 500px;
+    flex: 2;
+    max-width: 100%;
 }
 
 .weather-info {
@@ -133,12 +143,17 @@ button:hover {
 }
 
 .weather-dashboard {
-    max-width: 500px;
+    max-width: 100%;
     margin: auto;
     padding: 20px;
     background-color: #e0f7fa;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    max-height: 80vh;
+    overflow-y: auto;
 }
   
 .weather-header {
